@@ -71,7 +71,11 @@
 }
 
 .featurette-image{
-  border: solid 10px #CCC;
+  border: solid 5px #CCC;
+}
+
+.featurette-map{
+  border: solid 5px #CCC;
 }
 
 .middlesection{

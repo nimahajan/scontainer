@@ -1,17 +1,27 @@
-.catelog_jumbo{
-	padding-top: 40px;
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  padding-top: 100px;
+  height: 350px;
+  background-color: #333333; 
 }
 
-.catelog_jumbo h1{
-	font-size: 35px;
+.carousel .item {
+ 
+}
+
+.allproductsimg{
+	height: 250px;
+	width: auto;
 }
 
 .imagecontainer{
 	float: left;
 }
-.desccontainer{
 
-}
 .pimage{
 	width: auto;
 	height: 250px;
@@ -26,14 +36,16 @@
 	margin-top: 80px;
 }
  
-li {
+.carousel .item li {
+  color: #FFF;
   font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
 }
   
-li a {
+.carousel .item li a {
   text-decoration: none;
   display: block;
- 
+  color: #FFF;
+
   -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
   -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
   -o-transition: font-size 0.3s ease, background-color 0.3s ease;
@@ -41,26 +53,22 @@ li a {
   transition: font-size 0.3s ease, background-color 0.3s ease;
 }
  
-li a:hover {
-  font-size: 21px;
-
+.carousel .item li a:hover {
+  font-size: 22px;
+  color: #FFF;
 }
 
 .lead{
 	font-size: 16px;
 }
 
-p{
-	font-family: Helvetica, Verdana, sans-serif;
-}
 
-h2{
-	font-family: Helvetica, Verdana, sans-serif;
+h1{
+	color: #FFF;
 }
 
 h3{
 	color: #777;
-	font-family: Helvetica, Verdana, sans-serif;
 }
 
 th{

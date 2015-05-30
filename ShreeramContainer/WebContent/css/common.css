@@ -3,7 +3,11 @@
 /* Padding below the footer and lighter body text */
 
 body {
-  padding-bottom: 40px;
+  padding-bottom: 200px;
+}
+
+*{
+  font-family: 'Roboto', sans-serif;
 }
 
 
@@ -39,6 +43,11 @@ body {
   background-color: #CDDC39;
 }
 
+.navbar-inverse .navbar-brand:hover, 
+.navbar-inverse .navbar-brand:focus {
+  background-color: #CDDC39;
+  color: #000;
+}
 
 .contactbtn{
   margin-right: 20px;

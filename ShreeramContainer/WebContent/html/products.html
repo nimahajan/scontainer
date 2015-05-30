@@ -13,6 +13,7 @@
     <title>Shreeram Containers</title>
 
     <!-- Bootstrap core CSS -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -25,13 +26,15 @@
     <link href="../css/products.css" rel="stylesheet">
     <link href="../css/common.css" rel="stylesheet">
   </head>
-<!-- NAVBAR ================================================== -->
   <body>
+
+<!-- NAVBAR ================================================== -->
     <div class="navbar-wrapper">
       <div class="container">
 
         <nav class="navbar navbar-inverse navbar-static-top">
           <div class="container">
+            
             <div class="navbar-header">
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
@@ -41,6 +44,7 @@
               </button>
               <a class="navbar-brand" href="#">Shreeram Containers</a>
             </div>
+           
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                 <li><a href="#">Home</a></li>
@@ -59,25 +63,34 @@
                 <ul class="nav navbar-nav navbar-right">
                   <li><button class="btn btn-success navbar-btn contactbtn">Contact Us</button></li>
                 </ul>
-              </div>
             </div>
-          </div>
+
+            </div> <!-- Container -->
         </nav>
+
       </div>
     </div>
 <!-- NAVBAR ================================================== -->
-
-    <div class="container titlesection">
-      <h1>Product Catalog</h1>
-        <ul>
-            <li><a href="#pesticide">Pesticide And Agro-chemical Containers</a></li>
-            <li><a href="#powder">Powder Containers</a></li>
-            <li><a href="#chemical">Chemical Containers</a></li>
-            <li><a href="#caps">Caps</a></li>
-        </ul>
-     </div>
-
-    <hr class="featurette-divider"/>
+  
+     <div id="myCarousel" class="carousel slide" data-ride="carousel"> 
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <div class="container">
+            <div class="row">
+              <div class="col-md-8">
+              <h1>Product Catalog</h1>
+              <ul>
+                  <li><a href="#pesticide">Pesticide And Agro-chemical Containers</a></li>
+                  <li><a href="#powder">Powder Containers</a></li>
+                  <li><a href="#chemical">Chemical Containers</a></li>
+                  <li><a href="#caps">Caps</a></li>
+              </ul>
+              </div>
+          </div>
+        </div>
+        </div>  
+      </div> <!--carousel-inner-->
+    </div>
 
     <div class="container productcategory">
         <h2 id="pesticide">Pesticide And Agro-chemical Containers</h2>
@@ -432,6 +445,13 @@
           </div>
         </div>
       </div>
+
+    <hr class="featurette-divider"/>
+    <div class="container">
+        <footer class="footer">
+            <p>© Shreeram Containers Pvt Ltd. 2015</p>
+        </footer>
+    </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

@@ -14,7 +14,7 @@
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -25,14 +25,14 @@
     <link href="../css/home.css" rel="stylesheet">
     <link href="../css/common.css" rel="stylesheet">
   </head>
-<!-- NAVBAR
-================================================== -->
   <body>
+<!-- NAVBAR ================================================== -->
     <div class="navbar-wrapper">
       <div class="container">
 
         <nav class="navbar navbar-inverse navbar-static-top">
           <div class="container">
+            
             <div class="navbar-header">
               <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
@@ -42,6 +42,7 @@
               </button>
               <a class="navbar-brand" href="#">Shreeram Containers</a>
             </div>
+           
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Home</a></li>
@@ -60,14 +61,14 @@
                 <ul class="nav navbar-nav navbar-right">
                   <li><button class="btn btn-success navbar-btn contactbtn">Contact Us</button></li>
                 </ul>
-              </div>
             </div>
-          </div>
+
+            </div> <!-- Container -->
         </nav>
+
       </div>
     </div>
-
-
+<!-- NAVBAR ================================================== -->
     <!-- Carousel
     ================================================== -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -200,7 +201,7 @@
       </div>
       <div class="col-sm-4">
         <img src="../img/location_icon.png" alt="Sass and Less support" class="img-responsive">
-        <a class="btn btn-lg btn-danger" href="#" role="button">Location</a>
+        <a class="btn btn-lg btn-danger" href="#locationpointer" role="button">Location</a>
         <p>We are located in Jalgaon, Maharashtra and we deliver in central parts of India.</p>  
       </div>
       <div class="col-sm-4">
@@ -221,20 +222,31 @@
           <p class="lead">Our Products are build with Premium Quality Raw Material & have excellent aesthetics. They are widely used in various industries. These Products are available in various, size, shape, colours and patterns. The Products are quite attractive and offered at competitive market prices and on time Delivery. We also offer customized/different shape for bottles based on customer requirement.</p>
         </div>
         <div class="col-md-5">
-          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src="../img/productCatalog/allproducts.jpg" data-holder-rendered="true">
+          <img class="featurette-image img-responsive center-block" src="../img/productCatalog/allproducts.jpg">
         </div>
     </div>
     <hr class="featurette-divider"/>
-    <div class="row featurette">
-      <h2 class="featurette-heading">Largest Manufacturer in North Maharashtra.</h2>
-      <p class="lead">We are one of the leading manufacturers &amp;
-        suppliers of high quality HDPE (Plastic) Bottles, Containers &amp;
-        Jerry Cans along with Cap, Inners &amp; PVC Shrinks. These are use
-        for the packaging of solvents, adhesives, bio-organic products,
-        pesticides &amp; pharmaceuticals.</p>
+    <div class="row featurette" id="locationpointer">
+      <div class="col-md-5">
+          <iframe class="featurette-map" width="410" height="410" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?ie=UTF8&amp;cid=163464600789143859&amp;q=SHREERAM+CONTAINER&amp;gl=US&amp;hl=en&amp;t=m&amp;ll=21.011726,75.598683&amp;spn=0.016025,0.040298&amp;z=5&amp;iwloc=A&amp;output=embed"></iframe>
+      </div>
+      <div class="col-md-7">
+          <h2 class="featurette-heading">Largest Manufacturer in North Maharashtra.</h2>
+          <p class="lead">We are one of the leading manufacturers &amp;
+            suppliers of high quality HDPE (Plastic) Bottles, Containers &amp;
+            Jerry Cans along with Cap, Inners &amp; PVC Shrinks. These are use
+            for the packaging of solvents, adhesives, bio-organic products,
+            pesticides &amp; pharmaceuticals.</p>
+      </div>
     </div>
    </div>
 
+    <hr class="featurette-divider"/>
+    <div class="container">
+        <footer class="footer">
+            <p>© Shreeram Containers Pvt Ltd. 2015</p>
+        </footer>
+    </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
