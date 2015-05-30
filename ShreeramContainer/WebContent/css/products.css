@@ -1,0 +1,72 @@
+.catelog_jumbo{
+	padding-top: 40px;
+}
+
+.catelog_jumbo h1{
+	font-size: 35px;
+}
+
+.imagecontainer{
+	float: left;
+}
+.desccontainer{
+
+}
+.pimage{
+	width: auto;
+	height: 250px;
+	border: solid 4px #CCC;
+}
+
+.producttype{
+	padding: 10px;
+}
+
+.titlesection{
+	margin-top: 80px;
+}
+ 
+li {
+  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+}
+  
+li a {
+  text-decoration: none;
+  display: block;
+ 
+  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+  transition: font-size 0.3s ease, background-color 0.3s ease;
+}
+ 
+li a:hover {
+  font-size: 21px;
+
+}
+
+.lead{
+	font-size: 16px;
+}
+
+p{
+	font-family: Helvetica, Verdana, sans-serif;
+}
+
+h2{
+	font-family: Helvetica, Verdana, sans-serif;
+}
+
+h3{
+	color: #777;
+	font-family: Helvetica, Verdana, sans-serif;
+}
+
+th{
+	color: #777;
+}
+
+td{
+	color: #777;
+}
