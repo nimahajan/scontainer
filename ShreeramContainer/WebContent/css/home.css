@@ -15,7 +15,7 @@
 /* Declare heights because of positioning of img element */
 .carousel .item {
   height: 500px;
-  background-color: #333333; 
+  background-color: #212121; 
 }
 .carousel-inner > .item > img {
   position: absolute;
@@ -28,7 +28,7 @@
 .p_image{
   height: 235px;
   width: auto;
-  border: solid 4px;
+  border: solid 2px;
 }
 
 /* MARKETING CONTENT

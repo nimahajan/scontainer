@@ -37,7 +37,7 @@ body {
 }
 
 .navbar-inverse .navbar-brand {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 800;
   color: #000;
   background-color: #CDDC39;
@@ -59,6 +59,11 @@ body {
 .contactbtn:hover{
   background-color: #DD2C00;
   border-color: #DD2C00;
+}
+
+
+.navbar li a {
+  font-size: 15px;
 }
 
 /* RESPONSIVE CSS
