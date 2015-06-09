@@ -8,3 +8,9 @@
 .aboutcontent{
 	padding: 20px;
 }
+
+.rimage{
+	width: auto;
+	height: 60px;
+	border: solid 2px #CCC;
+}
