@@ -61,6 +61,14 @@ body {
   border-color: #DD2C00;
 }
 
+#contactmsg{
+	font-size: 17px;	
+}
+
+.btn-success.active, .btn-success.focus, .btn-success:active, .btn-success:focus, .btn-success:hover, .open>.dropdown-toggle.btn-success {
+	background-color: #DD2C00;
+	border-color: #DD2C00;
+}
 
 .navbar li a {
   font-size: 15px;
