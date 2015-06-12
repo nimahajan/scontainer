@@ -9,9 +9,16 @@ import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 @Path("/")
+@Component
 public class ShreeramContainerResource {
 
+	@Autowired
+	EmailService service;
+	
 	private static final Logger LOGGER = Logger.getLogger(ShreeramContainerResource.class.getName());
 
 	@POST
@@ -25,7 +32,6 @@ public class ShreeramContainerResource {
 		//TODO: Validate Inputs
 
 		try{
-			EmailService service = new EmailService();
 			service.sendContactEmail(contactNumber, contactMessage);
 		}catch(Exception e){
 			LOGGER.log(Level.SEVERE,"Error while sending emails",e);

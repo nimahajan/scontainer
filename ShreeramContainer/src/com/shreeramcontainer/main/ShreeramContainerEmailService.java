@@ -13,8 +13,11 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
-public class EmailService {
-	private static final Logger LOGGER = Logger.getLogger(EmailService.class.getName());
+import org.springframework.stereotype.Component;
+
+@Component
+public class ShreeramContainerEmailService implements EmailService{
+	private static final Logger LOGGER = Logger.getLogger(ShreeramContainerEmailService.class.getName());
 
 	public void sendContactEmail(String contactNumber, String message){
 		EmailConfigurations configurations = loadEmailConfigurations();
