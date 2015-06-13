@@ -13,12 +13,14 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
-import org.springframework.stereotype.Component;
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 public class ShreeramContainerEmailService implements EmailService{
 	private static final Logger LOGGER = Logger.getLogger(ShreeramContainerEmailService.class.getName());
 
+	@Async
 	public void sendContactEmail(String contactNumber, String message){
 		EmailConfigurations configurations = loadEmailConfigurations();
 		StringBuilder buffer = new StringBuilder();
