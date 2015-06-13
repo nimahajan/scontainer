@@ -1,6 +1,5 @@
 package com.shreeramcontainer.main;
 
-import java.net.URI;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -29,21 +28,16 @@ public class ShreeramContainerResource {
 		if(contactNumber==null || contactNumber.isEmpty()){
 			return Response.status(404).build();
 		}
-		//TODO: Validate Inputs
 
 		try{
 			service.sendContactEmail(contactNumber, contactMessage);
 		}catch(Exception e){
-			LOGGER.log(Level.SEVERE,"Error while sending emails",e);
-		}
-		URI uri=null;
-		try{
-			uri = new URI("../");
-		}catch(Exception e){
-			LOGGER.log(Level.SEVERE,"Error generating home page URI",e);
+			LOGGER.log(Level.SEVERE,"Error while submitting details",e);
+			return Response.status(500).entity("Submitting details failed").build();
 		}
 
-		return Response.seeOther(uri).build();
+		//return Response.seeOther(uri).build();
+		return Response.status(201).entity("Contact details submitted successfully.").build();
 	}
 
 }
