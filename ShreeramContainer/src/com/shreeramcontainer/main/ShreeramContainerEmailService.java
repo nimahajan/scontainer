@@ -6,8 +6,10 @@ import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import javax.mail.Authenticator;
 import javax.mail.Message;
 import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
@@ -31,27 +33,29 @@ public class ShreeramContainerEmailService implements EmailService{
 			mailServerProperties.put("mail.smtp.port", "587");
 			mailServerProperties.put("mail.smtp.auth", "true");
 			mailServerProperties.put("mail.smtp.starttls.enable", "true");
-			Session getMailSession = Session.getDefaultInstance(mailServerProperties, null);
-			MimeMessage generateMailMessage = new MimeMessage(getMailSession);
 
-			generateMailMessage.addRecipient(Message.RecipientType.TO, new InternetAddress(configurations.getTo()));
-			
+			Session session = Session.getInstance(mailServerProperties,new EmailAuthenticator(configurations.getSender(),configurations.getSenderCred()));
+			MimeMessage mailMessage = new MimeMessage(session);
+			mailMessage.addRecipient(Message.RecipientType.TO, new InternetAddress(configurations.getTo()));
+
 			if(configurations.getCc()!=null){
 				String ccAddress = configurations.getCc();
-					String[] ccAddresses = ccAddress.split(",");
-					for(String email:ccAddresses){
-						if(email!=null){
-							generateMailMessage.addRecipient(Message.RecipientType.CC, new InternetAddress(email));
-						}
+				String[] ccAddresses = ccAddress.split(",");
+				for(String email:ccAddresses){
+					if(email!=null){
+						mailMessage.addRecipient(Message.RecipientType.CC, new InternetAddress(email));
+					}
 				}
 			}
-			generateMailMessage.setSubject("Test from Nilesh..");
-			generateMailMessage.setContent(buffer.toString(), "text/html");
+			mailMessage.setFrom(new InternetAddress(configurations.getSender()));
+			mailMessage.setSubject("Enquiry on Website");
+			mailMessage.setContent(buffer.toString(), "text/html");
 
-			Transport transport = getMailSession.getTransport("smtp");
+			Transport transport = session.getTransport("smtp");
 			transport.connect("smtp.gmail.com", configurations.getSender(), configurations.getSenderCred());
-			transport.sendMessage(generateMailMessage, generateMailMessage.getAllRecipients());
+			transport.sendMessage(mailMessage, mailMessage.getAllRecipients());
 			transport.close();
+			
 		} catch (MessagingException e) {
 			LOGGER.log(Level.SEVERE, "Error while sending email", e);
 		}
@@ -88,12 +92,26 @@ public class ShreeramContainerEmailService implements EmailService{
 		return credentials;
 	}
 
+	private class EmailAuthenticator extends Authenticator{
+		String username;
+		String password;
+
+		public EmailAuthenticator(String username, String password){
+			this.username = username;
+			this.password = password;
+		}
+
+		protected PasswordAuthentication getPasswordAuthentication() {
+			return new PasswordAuthentication(username,password);
+		}
+	}
+
 	private class EmailConfigurations{
 		String senderCred;
 		String sender;
 		String to;
 		String cc;
-		
+
 		public String getSenderCred() {
 			return senderCred;
 		}
