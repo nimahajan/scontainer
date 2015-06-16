@@ -5,7 +5,7 @@
 /* Declare heights because of positioning of img element */
 .carousel .item {
   padding-top: 100px;
-  height: 350px;
+  height: 400px;
   background-color: #212121; 
 }
 
